@@ -41,11 +41,11 @@ namespace WishList.Controllers
         public IActionResult Delete(int Id)
         {
             var item = _context.Items.SingleOrDefault(item => item.Id == Id);
-            if (item != null)
-            {
+           
+            
                 _context.Items.Remove(item);
                 _context.SaveChanges();
-            }
+            
             return RedirectToAction("Index");
         }
     }
