@@ -44,6 +44,7 @@ namespace WishList.Controllers
             if (item != null)
             {
                 _context.Items.Remove(item);
+                _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
